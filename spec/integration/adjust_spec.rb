@@ -4,7 +4,7 @@ describe 'dm-adjust' do
 
   before :all do
 
-    class Person
+    class ::Person
       include DataMapper::Resource
       property :id,     Serial
       property :name,   String
