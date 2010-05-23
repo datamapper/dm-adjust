@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'rake'
+
 begin
   gem 'jeweler', '~> 1.4'
   require 'jeweler'
@@ -9,7 +10,7 @@ begin
     gem.summary     = 'DataMapper plugin providing methods to increment and decrement properties'
     gem.description = gem.summary
     gem.email       = 'sindre [a] identu [d] no'
-    gem.homepage    = 'http://github.com/datamapper/dm-more/tree/master/%s' % gem.name
+    gem.homepage    = 'http://github.com/datamapper/%s' % gem.name
     gem.authors     = [ 'Sindre Aarsaether' ]
 
     gem.rubyforge_project = 'datamapper'
