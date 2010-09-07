@@ -15,7 +15,7 @@ module DataMapper
     # @param attributes <Hash> A hash of attributes to adjust, and their adjustment
     # @param reload <FalseClass,TrueClass> If true, affected objects will be reloaded
     #
-    # @public
+    # @api public
     def adjust!(attributes = {}, reload = false)
       return true if attributes.empty?
 

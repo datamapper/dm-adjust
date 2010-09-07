@@ -13,7 +13,7 @@ module DataMapper
     #   * Children.adjust(:allowance => -100)
     #
     # @param attributes <Hash> A hash of attributes to adjust, and their adjustment
-    # @public
+    # @api public
     def adjust!(*args)
       all.adjust!(*args)
     end
