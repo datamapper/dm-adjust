@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "dm-adjust.gemspec",
      "lib/dm-adjust.rb",
      "lib/dm-adjust/adapters/data_objects_adapter.rb",
+     "lib/dm-adjust/adapters/in_memory_adapter.rb",
      "lib/dm-adjust/collection.rb",
      "lib/dm-adjust/model.rb",
      "lib/dm-adjust/repository.rb",
