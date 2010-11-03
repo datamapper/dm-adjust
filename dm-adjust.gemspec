@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Sindre Aarsaether"]
-  s.date = %q{2011-03-16}
+  s.date = %q{2011-04-09}
   s.description = %q{DataMapper plugin providing methods to increment and decrement properties}
   s.email = %q{sindre [a] identu [d] no}
   s.extra_rdoc_files = [
@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "dm-adjust.gemspec",
     "lib/dm-adjust.rb",
     "lib/dm-adjust/adapters/data_objects_adapter.rb",
+    "lib/dm-adjust/adapters/in_memory_adapter.rb",
     "lib/dm-adjust/collection.rb",
     "lib/dm-adjust/model.rb",
     "lib/dm-adjust/repository.rb",
@@ -40,7 +41,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/datamapper/dm-adjust}
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{datamapper}
-  s.rubygems_version = %q{1.6.2}
+  s.rubygems_version = %q{1.7.2}
   s.summary = %q{DataMapper plugin providing methods to increment and decrement properties}
   s.test_files = [
     "spec/integration/adjust_spec.rb",
