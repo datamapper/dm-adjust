@@ -38,7 +38,7 @@ module DataMapper
         end
 
         def set_adjustment_statement(properties)
-          properties.map { |p| "#{quote_name(p.field)} = #{quote_name(p.field)} + ?" }.join(', ')
+          properties.map { |p| "#{quote_name(p.field)} = COALESCE(#{quote_name(p.field)}, 0) + ?" }.join(', ')
         end
 
       end # module SQL
