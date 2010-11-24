@@ -10,9 +10,9 @@ DM_VERSION = '~> 1.0.2'
 group :runtime do # Runtime dependencies (as in the gemspec)
 
   if ENV['EXTLIB']
-    gem 'extlib',        '~> 0.9.15', SOURCE => "#{DATAMAPPER}/extlib#{REPO_POSTFIX}"
+    gem 'extlib',        '~> 0.9.15', SOURCE => "#{DATAMAPPER}/extlib#{REPO_POSTFIX}", :require => nil
   else
-    gem 'activesupport', '~> 3.0.0'
+    gem 'activesupport', '~> 3.0.3', :require => nil
   end
 
   gem 'dm-core', DM_VERSION, SOURCE => "#{DATAMAPPER}/dm-core#{REPO_POSTFIX}"
@@ -22,8 +22,8 @@ end
 group(:development) do # Development dependencies (as in the gemspec)
 
   gem 'rake',           '~> 0.8.7'
-  gem 'rspec',          '~> 1.3.0'
-  gem 'jeweler',        '~> 1.4'
+  gem 'rspec',          '~> 1.3.1'
+  gem 'jeweler',        '~> 1.4.0'
 
 end
 
