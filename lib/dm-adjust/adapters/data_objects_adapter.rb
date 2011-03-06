@@ -32,7 +32,7 @@ module DataMapper
 
           statement = "UPDATE #{quote_name(query.model.storage_name(name))}"
           statement << " SET #{set_adjustment_statement(properties)}"
-          statement << " WHERE #{conditions_statement}" unless conditions_statement.blank?
+          statement << " WHERE #{conditions_statement}" unless DataMapper::Ext.blank?(conditions_statement)
 
           return statement, bind_values
         end
