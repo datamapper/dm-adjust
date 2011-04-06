@@ -14,7 +14,7 @@ describe 'dm-adjust' do
 
   end
 
-  supported_by :sqlite, :mysql, :postgres do
+  supported_by :sqlite, :mysql, :postgres, :yaml do
 
     describe 'Adjust' do
 
