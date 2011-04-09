@@ -1,6 +1,6 @@
 module DataMapper
   module Adapters
-    class DataObjectsAdapter < AbstractAdapter
+    module DataObjectsAdapterAdjust
       def adjust(attributes, collection)
         query = collection.query
 
@@ -44,6 +44,18 @@ module DataMapper
       end # module SQL
 
       include SQL
-    end # class DataObjectsAdapter
+    end # module DataObjectsAdapterAdjust
+
+    extendable do
+      # @api private
+      def const_added(const_name)
+        if const_name == :DataObjectsAdapter
+          DataObjectsAdapter.send(:include, DataObjectsAdapterAdjust)
+        end
+
+        super
+      end
+    end
+
   end # module Adapters
 end # module DataMapper
