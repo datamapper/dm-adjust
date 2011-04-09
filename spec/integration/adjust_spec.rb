@@ -14,12 +14,13 @@ describe 'dm-adjust' do
 
   end
 
-  supported_by :sqlite, :mysql, :postgres do
+  supported_by :in_memory, :sqlite, :mysql, :postgres do
 
     describe 'Adjust' do
 
       before do
         Person.auto_migrate!(:default)
+        Person.all.destroy
         Person.create(:name => 'George', :age => 15)
         Person.create(:name => 'Puff',   :age => 18)
         Person.create(:name => 'Danny',  :age => 26)
