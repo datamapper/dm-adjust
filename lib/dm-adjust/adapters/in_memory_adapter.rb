@@ -14,12 +14,13 @@ module DataMapper
     extendable do
       # @api private
       def const_added(const_name)
-        if(const_name == :InMemoryAdapter)
+        if const_name == :InMemoryAdapter
           InMemoryAdapter.send(:include, InMemoryAdapterAdjust)
         end
 
         super
       end
     end
+
   end # module Adapters
 end # module DataMapper

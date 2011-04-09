@@ -25,5 +25,6 @@ module DataMapper
         super
       end
     end
+
   end # module Adapters
 end # module DataMapper
