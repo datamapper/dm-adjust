@@ -47,14 +47,7 @@ module DataMapper
     end # module DataObjectsAdapterAdjust
 
     extendable do
-      # @api private
-      def const_added(const_name)
-        if const_name == :DataObjectsAdapter
-          DataObjectsAdapter.send(:include, DataObjectsAdapterAdjust)
-        end
-
-        super
-      end
+      DataObjectsAdapter.send(:include, DataObjectsAdapterAdjust)
     end
 
   end # module Adapters
