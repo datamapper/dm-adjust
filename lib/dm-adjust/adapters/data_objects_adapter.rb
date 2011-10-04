@@ -52,8 +52,12 @@ module DataMapper
         if const_name == :DataObjectsAdapter
           DataObjectsAdapter.send(:include, DataObjectsAdapterAdjust)
         end
-
+        
         super
+      end
+      
+      if DataMapper::Adapters.const_defined?(:DataObjectsAdapter)
+        DataObjectsAdapter.send(:include, DataObjectsAdapterAdjust)
       end
     end
 
