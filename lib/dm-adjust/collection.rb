@@ -17,7 +17,7 @@ module DataMapper
     #
     # @api public
     def adjust!(attributes = {}, reload = false)
-      return true if attributes.empty?
+      return 0 if attributes.empty?
 
       reload_conditions = if reload
         model_key = model.key(repository.name)
@@ -25,7 +25,7 @@ module DataMapper
       end
 
       adjust_attributes = adjust_attributes(attributes)
-      repository.adjust(adjust_attributes, self)
+      affected_resource_count = repository.adjust(adjust_attributes, self)
 
       if reload_conditions
         @query.clear
@@ -33,7 +33,7 @@ module DataMapper
         self.reload
       end
 
-      true
+      affected_resource_count
     end
 
     private
